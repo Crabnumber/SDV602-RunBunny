@@ -14,6 +14,7 @@ public class BunnyController : MonoBehaviour
     private float bunnyHurtTime = -1;
     public Text scoreText;
     private float startTime;
+    private int jumpsLeft = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +31,22 @@ public class BunnyController : MonoBehaviour
     {
         if (bunnyHurtTime == -1) 
         {
-            if(Input.GetButtonUp("Jump"))
+            if(Input.GetButtonUp("Jump") && jumpsLeft > 0)
             {
-                myRigidBody.AddForce(transform.up * bunnyJumpForce);
+                if(myRigidBody.velocity.y < 0)
+                {
+                    myRigidBody.velocity = Vector2.zero;
+                }
+
+                if(jumpsLeft == 1)
+                {
+                    myRigidBody.AddForce(transform.up * bunnyJumpForce * 0.75f);
+                }
+                else
+                {
+                    myRigidBody.AddForce(transform.up * bunnyJumpForce);
+                }
+                jumpsLeft--;
             }
             myAnim.SetFloat("Velocity",System.Math.Abs(myRigidBody.velocity.y));
             scoreText.text = (Time.time - startTime).ToString("0.0");
@@ -66,6 +80,11 @@ public class BunnyController : MonoBehaviour
            myRigidBody.AddForce(transform.up * bunnyJumpForce);
            myCollider.enabled = false;
        }
+       else if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+       {
+           jumpsLeft = 2;
+       }
+
         
         
 

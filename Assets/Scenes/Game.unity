@@ -477,8 +477,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 377237408793458339, guid: 2bf35d9af1fe7334a8dbc0b58cbe8795, type: 3}
-  spawnRate: 1
-  randomDelay: 2
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041656494
+      value: 1.0047302
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.26433402
+      value: 1.2469574
+      inSlope: -4.6297812
+      outSlope: -4.6297812
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.025958112
+    - serializedVersion: 3
+      time: 0.44703588
+      value: 0.6722526
+      inSlope: -0.17037791
+      outSlope: -0.17037791
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6350835
+      value: 1.2412925
+      inSlope: 3.4960234
+      outSlope: 3.4960234
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0520687
+      value: 0.6266622
+      inSlope: -1.1918534
+      outSlope: -1.1918534
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.3432075
+      value: 1.3516397
+      inSlope: 1.5713903
+      outSlope: 1.5713903
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.4703829
+      value: 1.4382797
+      inSlope: 0.088736676
+      outSlope: 0.088736676
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.004192
+      value: 1.4187049
+      inSlope: -0.03338388
+      outSlope: -0.03338388
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.0749154
+      value: 0.483804
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curveLengthInSeconds: 30
+  jitter: 0.25
 --- !u!4 &414215162
 Transform:
   m_ObjectHideFlags: 0
@@ -915,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439470080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.62, y: -1.28, z: 0}
+  m_LocalPosition: {x: -3.96, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
