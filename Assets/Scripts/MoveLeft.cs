@@ -15,6 +15,6 @@ public class MoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
