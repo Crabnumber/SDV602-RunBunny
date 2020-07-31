@@ -68,8 +68,10 @@ public class BunnyController : MonoBehaviour
         // https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy") )
        {
-           PrefabSpawner spawner = FindObjectOfType<PrefabSpawner>();
-           spawner.enabled = false;
+           foreach (PrefabSpawner spawner in FindObjectsOfType<PrefabSpawner>())
+           {
+               spawner.enabled = false;
+           }
            foreach (MoveLeft movelefter in FindObjectsOfType<MoveLeft>())
            {
                movelefter.enabled = false;
